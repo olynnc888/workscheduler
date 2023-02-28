@@ -3,16 +3,16 @@
 // in the html.
 
 //Today date and day display
-var DateRN = dayjs().format('dddd, MMMM Do YYYY');
+var DateRN = moment().format('ddd, MMMM Do YYYY');
 $("#currentDay").html(DateRN);
 
 $(document).ready(function () {
-  $(".saveB").on("click", function () {
+  $(".saveBtn").on("click", function () {
     var txt = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
 //save to local storage
-    localStorage.setItem(txt, time);
+    localStorage.setItem(time, txt);
   })
 
   function TrackTime() {
