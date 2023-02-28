@@ -3,8 +3,8 @@
 // in the html.
 
 //Today date and day display
-var DateRN = moment().format('dddd, MMMM Do YYYY');
-$("#Today").html(DateRN);
+var DateRN = dayjs().format('dddd, MMMM Do YYYY');
+$("#currentDay").html(DateRN);
 
 $(document).ready(function () {
   $(".saveB").on("click", function () {
