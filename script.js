@@ -1,9 +1,5 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
 //Today date and day display
-var DateRN = moment().format('ddd, MMMM Do YYYY');
+var DateRN = dayjs().format('ddd, MMMM Do YYYY');
 $("#currentDay").html(DateRN);
 
 $(document).ready(function () {
@@ -16,7 +12,7 @@ $(document).ready(function () {
   })
 
   function TrackTime() {
-    var TimeRN = moment().hour();
+    var TimeRN = dayjs().hour();
 
 //loop time blocks
     $(".time-block").each(function () {
@@ -44,14 +40,14 @@ $(document).ready(function () {
   $("#hour10 .description").val(localStorage.getItem("hour10"));
   $("#hour11 .description").val(localStorage.getItem("hour11"));
   $("#hour12 .description").val(localStorage.getItem("hour12"));
-  $("#hour1 .description").val(localStorage.getItem("hour1"));
-  $("#hour2 .description").val(localStorage.getItem("hour2"));
-  $("#hour3 .description").val(localStorage.getItem("hour3"));
-  $("#hour4 .description").val(localStorage.getItem("hour4"));
-  $("#hour5 .description").val(localStorage.getItem("hour5"));
-  $("#hour6 .description").val(localStorage.getItem("hour6"));
-  $("#hour7 .description").val(localStorage.getItem("hour7"));
-  $("#hour8 .description").val(localStorage.getItem("hour8"));
+  $("#hour1 .description").val(localStorage.getItem("hour13"));
+  $("#hour2 .description").val(localStorage.getItem("hour14"));
+  $("#hour3 .description").val(localStorage.getItem("hour15"));
+  $("#hour4 .description").val(localStorage.getItem("hour16"));
+  $("#hour5 .description").val(localStorage.getItem("hour17"));
+  $("#hour6 .description").val(localStorage.getItem("hour18"));
+  $("#hour7 .description").val(localStorage.getItem("hour19"));
+  $("#hour8 .description").val(localStorage.getItem("hour20"));
 
   TrackTime();
 })
